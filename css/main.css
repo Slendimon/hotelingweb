@@ -1,0 +1,28 @@
+.header-contenedor{
+    width: 90%;
+    margin: auto;
+    align-content: center;
+}
+.inicio{
+    font-family: "arquitectalight";
+    font-size: 16px;
+    background: #ffffff;
+    display: table;
+    width: 100%;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.wrap{
+    min-height: 100%;
+    position: relative;
+    height: 100px;
+    display: table;
+    width: 100%;
+}
+.header-padding{
+    padding-top: 10px;
+    background: white;
+}

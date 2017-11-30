@@ -1,28 +1,130 @@
-.header-contenedor{
-    width: 90%;
-    margin: auto;
-    align-content: center;
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-.inicio{
-    font-family: "arquitectalight";
-    font-size: 16px;
-    background: #ffffff;
-    display: table;
+ 
+.contenedor{
     width: 100%;
     position: relative;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-.wrap{
+    height: 100%;   
     min-height: 100%;
-    position: relative;
-    height: 100px;
-    display: table;
-    width: 100%;
 }
-.header-padding{
-    padding-top: 10px;
-    background: white;
+body .contenedor{
+    display: table;
+}
+body {
+	background:rgb(253, 253, 253);
+}
+.img_header{
+    padding-top: 8px;
+    width: 220px 42px;
+    text-align: center;
+} 
+ 
+header {
+	width:100%;
+}
+ 
+header nav {
+	width:90%;
+	max-width:1000px;
+	margin:20px auto;
+	background:#fcfcfc;
+}
+ 
+.menu_bar {
+	display:none;
+}
+ 
+header nav ul {
+	overflow:hidden;
+	list-style:none;
+}
+ 
+header nav ul li {
+	float:left;
+}
+ 
+ul.tabs li{
+    width: 20%;
+}
+ul.tabs li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0); 
+    font-size: 18px;
+    display: block;
+    padding: 18px 0px;
+    text-align: center;
+}
+header nav ul li span {
+	margin-right:10px;
+}
+ 
+header nav ul li a:hover {
+	background:rgb(100, 102, 102);
+}
+ 
+section {   
+	padding:20px;
+}
+
+.slide{
+    border: none;
+    width: 600px;
+    height: 300px;
+    margin: 2% auto;
+    border-radius: .5em;
+    position: relative;
+}
+
+.slide img{
+    width: 700px;
+    height: 400px;
+    position: absolute;
+}
+
+.slide .img2, .slide .img3 {
+    display: none;
+}
+@media screen and (max-width:800px ) {
+	header nav {
+		width:80%;
+		height:100%;
+		left:-100%;
+		margin:0;
+		position: fixed;
+	}
+ 
+	header nav ul li {
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .3);
+	}
+ 
+	.menu_bar {
+		display:block;
+		width:100%;
+		background:#ccc;
+	}
+ 
+	.menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		background:#ffffff;
+		color:#fff;
+		text-decoration:none;
+		font-weight: bold;
+		font-size:25px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+ 
+	.menu_bar span {
+		float:right;
+		font-size:40px;
+	}
 }

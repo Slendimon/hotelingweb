@@ -38,7 +38,7 @@
              Equipamiento de la habitacón:
             </strong>  
             <p class="text-justify">  
-               Ducha, TV, Articulos de aseo gratis, Ventilador, Baño, Calefaccion, Canales cable,Toallas/Sabanas (con suplemento), Armario, Perchero, Papeleras, Almoahda hipoalergenica.
+               Ducha, TV, Articulos de aseo gratis, Ventilador, Baño, Calefaccion, Canales cable,Toallas/Sabanas (con suplemento), Armario, Perchero, Papeleras, Almohada hipoalergenica.
                  <p>
                      Wifi gratis!
                  </p>       

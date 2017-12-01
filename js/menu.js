@@ -30,3 +30,10 @@ function avanzaSlide(){
        //mostramos la nueva imagen
    mostrar(arrayImagenes[contador]);
 }
+$('.clic').click(function(){
+    if($(this).hasClass('active')){
+        $(this).removeClass('active')
+    } else {
+        $(this).addClass('active')
+    }
+});

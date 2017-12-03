@@ -16,49 +16,94 @@
     <title>Hotel Terrazas</title>
 </head>
 <body>
-    <div class="contenido">
-        <div class="header">
-         <header>
-            <div class="img_header">
-                <img src="img/logoterrazassinfondo.png" alt="" width="220px 43px">
-            </div>
-            <div class="menu_header">
-                <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Menú
-                        <span class="caret"></span></button>
-                        <ul class="multinivel dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" class="clic" href="#">Inicio</a></li>
-                            <li role="presentation"><a role="menuitem" href="#">Servicios</a></li>
-                            <li role="presentation"><a role="menuitem" href="#">Habitaciones</a></li>
-                            <li role="presentation" class="divider"></li>
-                            <li role="presentation"><a role="menuitem" href="#">Contacto</a></li>
-                        </ul>
+    <div id="contenedor">
+        <div class="header-estatico">
+            <div id="contacto">
+                <div class="telefono">
+                    <p>Central telefonica: +5105232434</p>
                 </div>
-                <!--<div class="menu_bar">
-			        <a href="#" class="bt-menu"><span class="icon-list2"></span>Menu</a>
-		        </div>
-                <nav>
-			        <ul class="tabs">
-				        <li><a href="#"><span class="icon-house"></span>Inicio</a></li>
-				        <li><a href="#"><span class="icon-suitcase"></span>Servicios</a></li>
-				        <li><a href="habitaciones/habitaciondoble.php"><span class="icon-rocket"></span>Habitaciones</a></li>
-				        <li><a href="reservas.php"><span class="icon-earth"></span>Reservaciones</a></li>
-				        <li><a href="contactos.php"><span class=git"fa fa-envelope" aria-hidden="true"></span>Contacto</a></li>
-			        </ul>
-		        </nav>-->
-            </div>  
-        </header>
+                <div class="sesion">
+                    <button><a href="habitaciones/login.php">Login</a></button>
+                </div>
+            </div>
+            <div class="limpiar"></div>
+            <header>
+                <a href="#"><img src="img/logoterrazassinfondo.png" alt="Logo terrazas"></a>
+            </header>
+            <nav class="navbar">
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#habitaciones">Habitaciones</a></li>
+                <li><a href="">Reserva</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="#ubicacion">Ubicacion</a></li>
+            </ul>
+            <div class="limpiar"></div>
+            </nav>
         </div>
-        <div class="slide">
-                <figure>
-                    <img class="img1" src="img/fachada.jpg" alt="">
-                    <img class="img2" src="img/gradas.jpg" alt="">
-                    <img class="img3" src="img/interior1.jpg" alt="">
-                </figure>>
+        <div class="contenido">
+        <div class="banner">
+            <img src="img/fachada.jpg" alt="">
+        </div>
+        <center class="frase">
+            <h1>Siéntete como en casa</h1>
+        </center>
+        <div id="servicios">
+            <section class="left-col">
+                <h3>Nuestros servicios</h3>
+                <h4>Desayuno</h4>
+                <p style="text-indent:50px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque sed harum dolorem esse odio mollitia recusandae quas autem odit! Inventore pariatur voluptas iusto debitis laudantium explicabo repellendus, eveniet magnam eligendi.</p>
+                <h4>Estacionamiento</h4>
+            </section>
+            <aside class="sidebar">
+                <div class="servicios">
+                    <img src="img/desayuno.jpg" alt="">
+                </div>
+            </aside>
+            </div>
+        
+        <div class="limpiar"></div>
+        <div class="seccion" id="habitaciones">
+            <h3>Habitacion simple</h3>
+            <img src="img/habitacionsimple.jpg" alt="">
+            <p>Contamos con una habitacion simple que tiene todas las comodidades</p>
+        </div>
+        <div class="seccion">
+            <h3>Habitacion doble</h3>
+            <img src="img/habitaciondoble.jpg" alt="">
+            <p>Contamos con una habitacion simple que tiene todas las comodidades</p>
+        </div>
+        <div class="seccion">
+            <h3>Habitacion triple</h3>
+            <img src="img/habitaciontriple.jpg" alt="">
+            <p>Contamos con una habitacion simple que tiene todas las comodidades</p>
+        </div>
+        <footer>
+            <div class="seccion">
+                <p>Contáctanos</p>
+                <p><b>+51052244333</b><br>
+                Calle nose que as <br>
+                terrazashotel@gmail.com</p>
+            </div>
+            <div class="seccion">
+                <p>Búscanos en las redes</p>
+                <ul>
+                    <li><a href=""><img src="img/facebooklogo.png" alt=""></a></li>
+                    <li><a href=""><img src="img/instagramlogo.png" alt=""></a></li>
+                    <li><a href=""><img src="img/whatsapplogo.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="seccion">
+
+            </div>
+        </footer>
         </div>
         
     </div>
 
+    <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="js/menu.js"></script>
     
 </body>
 </html>

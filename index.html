@@ -4,36 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/tether/dist/css/tether.min.css">
-    <script src="node_modules/tether/dist/js/tether.min.js"></script>
-    <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/menu.js"></script>
 
+    <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+
+    
     <title>Hotel Terrazas</title>
 </head>
 <body>
-    <div class="contenido">
-        <div class="header">
-         <header>
-            <div class="img_header">
-                <img src="img/logoterrazassinfondo.png" alt="" width="220px 43px">
-            </div>
-            <div class="menu_header">
-                <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Menú
-                        <span class="caret"></span></button>
-                        <ul class="multinivel dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" class="clic" href="#">Inicio</a></li>
-                            <li role="presentation"><a role="menuitem" href="#">Servicios</a></li>
-                            <li role="presentation"><a role="menuitem" href="#">Habitaciones</a></li>
-                            <li role="presentation" class="divider"></li>
-                            <li role="presentation"><a role="menuitem" href="#">Contacto</a></li>
-                        </ul>
+    <div id="contenedor">
+        <header>
+            <div class="header-inner">
+                <a href="index.html" id="logo"></a>
+                <nav class="navbar">
+                    <a href="#" id="menu-icon"></a>
+                    <ul>
+                        <li><a href="#Servicios">SERVICIOS</a></li>
+                        <li><a href="#habitaciones">HABITACIONES</a></li>
+                        <li><a href="#contacto">CONTACTO</a></li>
+                        <li class="reserva"><a href="php/reservas.php">RESERVAR</a></li>
+                        <li><a href="login.html">LOGIN</a></li>
+                    </ul>
+                <div class="limpiar"></div>
+                </nav>
+            </div>   
+        </header>
+        <!--Em pieza el contenido de la pagina -->
+        <div class="contenido">
+            <!--Empieza el slider -->
+            <div class="bodyslider">
+                <div id="contenedor-slider" class="contenedor-slider">
+                    <div id="slider" class="slider">
+                        <section class="slider__section"><img src="img/n1.jpg" class="slider__img"></section>
+                        <section class="slider__section"><img src="img/n2.jpg" class="slider__img"></section>
+                        <section class="slider__section"><img src="img/n3.jpg" class="slider__img"></section>
+                    </div>
+                    <div id="btn-prev" class="btn-prev">&#60;</div>
+                    <div id="btn-next" class="btn-next">&#62;</div>
                 </div>
+            </div>
+            
+            <!-- Fin del slider-->
+
+            <center class="acercade">
+                <h1 class="space">Siéntase como en casa</h1>
+                <p>Terrazas Hostal, tiene a su alcance diversas habitaciones para que usted pueda escoger y 
+                    sentirse cómodo, esta ubicado en pleno centro de la ciudad de Tacna, a una cuadra del 
+                    paseo cívico y 15 min del aeropuerto de Tacna.
+                    Inicia el dia con nuestros desayunos criollos y los servicios con los que 
+                    contamos son: WiFi, estacionamiento, transporte, etc.</p> <p>
+                    Se parte de una nueva aventura en Tacna, se parte de Terrazas Hostal.</p><br>
+
+            </center>
+            <div id="habitaciones">
+                <div class="habititulo">
+                        <h1>HABITACIONES</h1>
+                </div>
+                <section class="inner-wrapper">
+                    <article>
+                        <img src="img/habisimple.jpg" alt="">
+                    </article>
+                    <aside id="hsimple">
+                        <h2>Habitacion simple</h2>
+                        <p>
+                            <strong>Tamaño de la habitacion </strong>=" 16 m2 "
+                        </p>
+                        <ul class="lista">
+                            <li>1 Cama</li>
+                            <li>Ducha</li>
+                            <li>TV LCD</li>
+                            <li>WiFi Gratis</li>
+                        </ul>
+                    
+                    </aside>
+                    
+                </section>
+                <section class="inner-wrapper-2">
+                    <article id="hdoble">
+                        <h2>Habitacion doble</h2>
+                            <p>
+                                <strong>Tamaño de la habitacion </strong>=" 20 m2 "
+                            </p>  
+                            <ul class="lista">
+                                <li>2 Camas</li>
+                                <li>Ducha</li>
+                                <li>TV LCD</li>
+                                <li>WiFi Gratis</li>
+                            </ul>
+                    </article>
+                    <aside class="hand-mobile">
+                        <img src="img/habidoble2.jpg" alt="">
+                    </aside>
+                </section>
+                <section class="inner-wrapper">
+                    <article>
+                        <img src="img/matrimonial.jpg" alt="">
+                    </article>
+                    <aside id="htriple">
+                       <h2>Habitacion Matrimonial</h2>
+                            <p>
+                                <strong>Tamaño de la habitacion </strong>=" 24 m2 "
+                            </p>  
+                            <ul class="lista">
+                                <li>1 Cama de 2 plazas</li>
+                                <li>Ducha</li>
+                                <li>TV LCD</li>
+                                <li>WiFi Gratis</li>
+                            </ul>
+                    </aside>
+                </section>
+                <section class="inner-wrapper-2">
+                    <article id="hmatrimonial">
+                        <h2>Habitacion Triple</h2>
+                            <p>
+                                <strong>Tamaño de la habitacion </strong>=" 25 m2 "
+                            </p>  
+                        <ul class="lista">
+                            <li>3 Camas</li>
+                            <li>Ducha</li>
+                            <li>TV LCD</li>
+                            <li>WiFi Gratis</li>
+                        </ul>
+                    </article>
+                    <aside>
+                        <img src="img/triple.jpg" alt="">
+                    </aside>
+                </section>
+            </div>
+
+            <div class="limpiar"></div>
+
+        <div id="Servicios">
+            <section class="servi" id="incluido">
+                <h3>Servicios inclíudos</h3>
+                <td>
+                    <ul class="servilista">
+                        <li><i class="fa fa-wifi" aria-hidden="true"></i><span class="separa"></span> WiFi gratis </li>
+                        <li><i class="fa fa-shower" aria-hidden="true"></i><span class="separa"></span> Agua caliente </li>
+                        <li><i class="fa fa-coffee" aria-hidden="true"></i><span class="separa"></span> Desayuno</li>
+                        <li><i class="fa fa-credit-card" aria-hidden="true"></i><span class="separa"></span> Se aceptan pagos con Visa</li>
+                    </ul>
+                </td>
+            </section>
+            <section class="servi" id="noincluido">
+                <h3>Servicios costo adicional</h3>
+                <td>
+                    <ul class="servilista">
+                        <li><i class="fa fa-shopping-basket" aria-hidden="true"></i><span class="separa"></span> Lavanderia</li>
+                        <li><i class="fa fa-taxi" aria-hidden="true"></i><span class="separa"></span> Transporte</li>
+                    </ul>
+                </td>
+            </section>
+        </div> 
+        <div class="limpiar"></div>
+        <div class="space2"></div>
+        <div id="contacto" class="space">
+            <div class="formulario">
+                <form action="php/envioEmail.php" method="post">
+                <div class="cabecera">
+                    <h1>Contacto</h1>
+                    <p>Escríbenos si tienes alguna duda o sugerencia: </p>
+                </div>
+<<<<<<< HEAD
                 <!--<div class="menu_bar">
 			        <a href="#" class="bt-menu"><span class="icon-list2"></span>Menu</a>
 		        </div>
@@ -54,17 +189,48 @@
 		        </nav>-->
             </div>  
         </header>
+=======
+                
+                <div class="form2">
+                    <input type="text" name="pnombre" value="Nombre">
+                </div>
+                <div class="form2">
+                    <input type="text" name="correo" value="Correo electrónico">
+                </div>
+                <div  class="form2">
+                    <input type="text" name="asunto" value="Asunto">
+                </div>                   
+                    <textarea name="asunto" id="" cols="30" rows="10"></textarea>
+                <div class="btn-enviar">
+                    <input type="submit" name="enviar">
+                </div>
+                </form>
+            </div>
+>>>>>>> 11b773498197c36886728b83d958b89a11132dc6
         </div>
-        <div class="slide">
-                <figure>
-                    <img class="img1" src="img/fachada.jpg" alt="">
-                    <img class="img2" src="img/gradas.jpg" alt="">
-                    <img class="img3" src="img/interior1.jpg" alt="">
-                </figure>>
-        </div>
-        
-    </div>
 
-    
+        </div>
+            <footer>
+                <div class="seccion">
+                    <p>Contáctanos</p>
+                    <p><b>+51052244333</b><br>
+                    Avenida Cusco 58, Tacna <br>
+                    terrazashotel@gmail.com</p>
+                </div>
+                <div class="seccion" id="redessociales">
+                    <p>Búscanos en las redes</p>
+                    <ul class="logofooter">
+                        <li><a href=""><img src="img/facebooklogo.png" alt=""></a></li>
+                        <li><a href=""><img src="img/instagramlogo.png" alt=""></a></li>
+                        <li><a href=""><img src="img/whatsapplogo.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="seccion">
+
+                </div>
+            </footer>
+ 
+    </div>
+    <script src="js/slider.js"></script>
 </body>
 </html>

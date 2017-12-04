@@ -1,115 +1,388 @@
 *{
+    border: 0;
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+}
+body{
+    background: #ffffff;
+    color: black;
+    font-family: 'Alegreya Sans',sans-serif;
+    margin: 0;
     box-sizing: border-box;
-}
  
-.contenedor{
-    width: 100%;
-    position: relative;
-    height: 100%;   
-    min-height: 100%;
 }
-
-body .contenedor{
-    display: table;
-}
-body {
-	background:rgb(253, 253, 253);
-}
-
-.img_header{
-    padding-top: 8px;
-    width: 220px 42px;
+h1, h2, h3{
     text-align: center;
-} 
- 
-header {
-	width:100%;
+
+    color: black;
+    padding-top: 2%;
 }
-.menu_header{
-	display: block;
-	margin: 0 auto 10px;
-	box-sizing: border-box;
-	text-align: left;
-	padding-left: 40px;
-	padding-top: 0px;
+p{
+    line-height: 130%;
+    padding: 3%;
+    text-indent: 2%;
+    text-align: justify;
 }
-.active{
-	background: #706f6f;
+
+img{
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    width: auto;
 }
-ul.multinivel{
-	background: #ffffff;
+
+header{
+    padding-top: -5px;  
+    background-color: #ffffff;
+    width: 100%;
+    height: 86px;
+    position: fixed;
+
 }
-ul.multinivel li{
-    width: 30%;
+.header-inner{
+    max-width: 1200px;
+    margin: 0 auto;
 }
-ul.multinivel li a{
-	text-decoration: none;
-	color: rgb(100, 97, 97);
-	display: block;
-	padding: 18px;
+#logo{
+    margin: 20px;
+    float: left;
+    width: 200px;
+    height: 50px;
+    background: url(../img/logoterrazas.fw.png) no-repeat center;
 }
-ul.multinivel li a:hover{
-	background: #555555;
-	position: absolute;
+nav{
+    float: right;
+    padding: 25px 20px 0 0;
 }
-.slide{
-    border: none;
-    width: 600px;
-    height: 300px;
-    margin: 2% auto;
-    border-radius: .5em;
+#menu-icon{
     position: relative;
+    display: hidden;
+    width: 45px;
+    height: 40px;
+    background: url(../img/navbar.png) center;
 }
 
-.slide img{
-    width: 700px;
-    height: 400px;
+a:hover#icono-menu{
+    border-radius: 4px 4px 0 0;
+
+}
+ul{
+    list-style-type: none;
+}
+nav ul li{
+    font-size: 100%;
+    display: inline-block;
+    
+    padding: 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    
+}
+
+nav ul li a:hover{
+    color: #a89e9e;
+    text-decoration: none;
+
+}
+
+.current{
+    color: #a89e9e;
+
+}
+
+/* fin de la decoracion de la navegacion*/
+
+
+/*Inicio del slider*/
+
+    .bodyslider{
+        background: rgb(253, 254, 255);
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    .contenedor-slider {
+        margin: auto;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .slider {
+        display: flex;
+        width: 300%;
+    }
+    
+    .slider__section {
+        width: 100%;
+    }
+    
+    .slider__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+  
+    .btn-prev, .btn-next {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    font-family: monospace;
+    cursor: pointer;
+  }
+  
+  .btn-prev:hover, .btn-next:hover {
+    background: white;
+  }
+  
+  .btn-prev {
+    left: 10px;
+  }
+  
+  .btn-next {
+    right: 10px;
+  }
+
+
+/*fin slider*/
+ .acercade{
+     text-align: center;
+     padding-left: 15%;
+     padding-right: 15%;
+     font-size: 120%;
+ }
+.space{
+     padding-top: 25px;
+     padding-bottom: 27px;
+ }
+.space2{
+    padding-top:86px;
+}
+.contenido{
+    padding-top: 70px;
 }
 
-.slide .img2, .slide .img3 {
-    display: none;
+#habitaciones{
+    padding-bottom: 25px;
+
 }
-@media screen and (max-width:800px ) {
-	header nav {
-		width:80%;
-		height:100%;
-		left:-100%;
-		margin:0;
-		position: fixed;
-	}
- 
-	header nav ul li {
-		display:block;
-		float:none;
-		border-bottom:1px solid rgba(255,255,255, .3);
-	}
- 
-	.menu_bar {
-		display:block;
-		width:100%;
-		background:#ccc;
-	}
- 
-	.menu_bar .bt-menu {
-		display:block;
-		padding:20px;
-		background:#ffffff;
-		color:#fff;
-		text-decoration:none;
-		font-weight: bold;
-		font-size:25px;
-		-webkit-box-sizing:border-box;
-		-moz-box-sizing:border-box;
-		box-sizing:border-box;
-	}
- 
-	.menu_bar span {
-		float:right;
-		font-size:40px;
-	}
+
+.limpiar{
+    clear: both;
+}
+
+.inner-wrapper{
+    float: left;
+    width: 100%;
+}
+.inner-wrapper-2{
+    float: right;
+    width: 100%;
+}
+.habititulo{
+    padding: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 140%;
+    padding-bottom: 50px;
+}
+ul.lista{
+    padding-left: 40px;
+    list-style: square;
+}
+ul.lista li{
+    
+    padding: 1%;
+}
+article{
+    float: left;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    font-size: 100%;
+}
+#habi1{
+    background: grey;
+}
+aside {
+    float: right;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    font-size: 100%;
+}
+
+
+/*inicio de servicios styling*/
+#Servicios{
+    padding-top: 5%;
+    font-size: 20px;
+}
+.servi{
+    width: 50%;
+    float: left;
+    text-align: left;
+    height: 350px;
+}
+.servi h3{
+    padding-top: 5%;
+}
+#incluido{
+    background: rgb(231, 231, 231);
+}
+#noincluido{
+    background: rgb(206, 201, 201);
+}
+.servi ul li{
+    padding-left: 18%;
+    padding-top: 5%
+}
+.separa{
+    padding-left: 10px;
+}
+
+.seccion{
+    width: 29%;
+    float: left;
+    margin: 2% 2%;
+    text-align: center;
+    font-size: 100%;
+}
+footer{
+    background: rgb(255, 255, 255);
+    width: 100%;
+    overflow: hidden;
+}
+.logofooter img{
+    width: 40px;
+    height: 40px;
+}
+.seccion ul li{
+    display: inline-block;
+    padding: 5%;
+}
+.seccion p{
+    text-align: center;
+
+}
+/*contacto*/
+#contacto{
+    
+    background: url(../img/tacna.jpg)
+}
+.cabecera{
+    color: white;
+    font-size: 100%;
+}
+.cabecera h1{
+    color: white;
+}
+.cabecera p{
+    text-align: center;
+    font-size: 24px;
+}
+
+.form2{
+    display: inline-block;
+    width: 50%;
+    float: left;
+    padding: 0.5%;
+    text-align: center;
+}
+.form2 input{
+    text-align: center;
+    padding-bottom: 2%;
+    padding-top:2%;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+.formulario textarea{
+    height: 200px; 
+    width: 44%;
+}
+.btn-enviar{
+    padding-top: 2.5%;
+    text-align: center;
+}
+.btn-enviar input{
+    width: 80px;
+    height: 40px;
+    font-size: 100%;
+}
+
+/*para dispositivos*/
+@media screen and (max-width:768px){
+    h1{
+        font-size: 120%;
+    }
+    h2{
+        font-size: 100%;
+    }
+    h3{
+        font-size: 80%;
+    }
+    p{
+        font-size: 70%;
+    }
+    header{
+        position: absolute;
+        background: rgb(231, 226, 226);
+    }
+    header nav{
+        position: static;
+        width: auto;
+        height:auto;
+        transform: translate(0%);
+
+    }
+    #logo{
+        margin: 15px 0 20px -25px;
+        background: url(../img/minilogo.fw.png) no-repeat center;
+    }
+    #menu-icon{
+        display: inline-block;
+    }
+    nav ul, nav:active ul{
+        display: none;
+        z-index: 1000;
+        position: absolute;
+        padding: 20px;
+        background: black;
+        right: 20px;
+        top: 60px;
+        border: 1px solid #ffffff;
+        border-radius: 10px 0 2px 2px;
+        width: 50%;
+    }
+    nav::hover ul{
+        display: block;
+    }
+    nav li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .servi{
+        font-size: 350%;
+        width: 100%;
+    }
+    article{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+    .hand-mobile{
+        display: none;
+    }
 }

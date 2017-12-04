@@ -1,0 +1,33 @@
+.flexslider{
+    widows: 100%;
+    position: relative;
+}
+.slides{
+    overflow: hidden;
+}
+.slides img{
+    width: 100%;
+}
+.slides,
+.flex-control-nav,
+.flex-direction-nav{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.flex-control-nav{
+    width: 100%;
+    text-align: center;
+}
+.flex-control-nav li{
+    display: inline-block;
+    margin: 0 6px;
+}
+.flex-control-nav li {
+    display: block;
+    background: #777777;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    text-indent: -9999px;
+}

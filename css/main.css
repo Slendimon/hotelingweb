@@ -13,7 +13,7 @@ body{
 }
 h1, h2, h3{
     text-align: center;
-    padding-left: 5%;
+
     color: black;
     padding-top: 2%;
 }
@@ -35,7 +35,7 @@ header{
     padding-top: -5px;  
     background-color: #ffffff;
     width: 100%;
-    height: 70px;
+    height: 86px;
     position: fixed;
 
 }
@@ -164,9 +164,11 @@ nav ul li a:hover{
  }
 .space{
      padding-top: 25px;
-     padding-bottom: 25px;
+     padding-bottom: 27px;
  }
-
+.space2{
+    padding-top:86px;
+}
 .contenido{
     padding-top: 70px;
 }
@@ -268,6 +270,54 @@ footer{
 .seccion ul li{
     display: inline-block;
     padding: 5%;
+}
+.seccion p{
+    text-align: center;
+
+}
+/*contacto*/
+#contacto{
+    
+    background: url(../img/tacna.jpg)
+}
+.cabecera{
+    color: white;
+    font-size: 100%;
+}
+.cabecera h1{
+    color: white;
+}
+.cabecera p{
+    text-align: center;
+    font-size: 24px;
+}
+
+.form2{
+    display: inline-block;
+    width: 50%;
+    float: left;
+    padding: 0.5%;
+    text-align: center;
+}
+.form2 input{
+    text-align: center;
+    padding-bottom: 2%;
+    padding-top:2%;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+.formulario textarea{
+    height: 200px; 
+    width: 44%;
+}
+.btn-enviar{
+    padding-top: 2.5%;
+    text-align: center;
+}
+.btn-enviar input{
+    width: 80px;
+    height: 40px;
+    font-size: 100%;
 }
 
 /*para dispositivos*/

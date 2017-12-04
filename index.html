@@ -24,8 +24,8 @@
                     <ul>
                         <li><a href="#Servicios">SERVICIOS</a></li>
                         <li><a href="#habitaciones">HABITACIONES</a></li>
-                        <li><a href="">CONTACTO</a></li>
-                        <li class="reserva"><a href="">RESERVAR</a></li>
+                        <li><a href="#contacto">CONTACTO</a></li>
+                        <li class="reserva"><a href="php/reservas.php">RESERVAR</a></li>
                         <li><a href="login.html">LOGIN</a></li>
                     </ul>
                 <div class="limpiar"></div>
@@ -159,7 +159,33 @@
                 </td>
             </section>
         </div> 
-            
+        <div class="limpiar"></div>
+        <div class="space2"></div>
+        <div id="contacto" class="space">
+            <div class="formulario">
+                <form action="php/envioEmail.php" method="post">
+                <div class="cabecera">
+                    <h1>Contacto</h1>
+                    <p>Escríbenos si tienes alguna duda o sugerencia: </p>
+                </div>
+                
+                <div class="form2">
+                    <input type="text" name="pnombre" value="Nombre">
+                </div>
+                <div class="form2">
+                    <input type="text" name="correo" value="Correo electrónico">
+                </div>
+                <div  class="form2">
+                    <input type="text" name="asunto" value="Asunto">
+                </div>                   
+                    <textarea name="asunto" id="" cols="30" rows="10"></textarea>
+                <div class="btn-enviar">
+                    <input type="submit" name="enviar">
+                </div>
+                </form>
+            </div>
+        </div>
+
         </div>
             <footer>
                 <div class="seccion">

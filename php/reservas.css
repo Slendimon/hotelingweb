@@ -1,0 +1,53 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: rgba(197, 225, 165,1.0);
+}
+
+.reserva{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-weight:bold;
+}
+
+.reserva form{
+	display: flex;
+	flex-direction: column;
+	text-align:center;
+	background: rgba(255, 253, 231,1.0);
+	padding: 1em 3em;
+	border-radius: 20px; 
+	border: none;
+}
+
+.reserva form h2{
+	font-weight:bold;
+	font-style: italic;
+	color: blue;
+}
+.reserva form label{
+	font-weight:bold;
+	font-style: italic;
+}
+
+.reservas_campo{
+	padding: 0.5em 1em;
+	min-width: 20em;
+	margin: 0.5em 0 0.5em 0;
+	font-size: 12px;
+	border-radius: 10px; 
+	border: none;
+	background: rgba(255, 224, 130,1.0);
+}
+.reservar_boton{
+	padding: 0.5em 0;
+	border-radius: 10px;
+	border:none;
+	color:blue;
+	background: #95a5a6;
+}

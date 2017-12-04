@@ -6,7 +6,7 @@
 body{
     background: #ffffff;
     color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Alegreya Sans',sans-serif;
     margin: 0;
     box-sizing: border-box;
  
@@ -15,6 +15,13 @@ h1, h2, h3{
     text-align: center;
     padding-left: 5%;
     color: black;
+    padding-top: 2%;
+}
+p{
+    line-height: 130%;
+    padding: 3%;
+    text-indent: 2%;
+    text-align: justify;
 }
 
 img{
@@ -47,7 +54,8 @@ nav{
     padding: 25px 20px 0 0;
 }
 #icono-menu{
-    display: none;
+    position: relative;
+    display: hidden;
     width: 45px;
     height: 40px;
     background: url(../img/navbar.png) center;
@@ -81,7 +89,7 @@ nav ul li a:hover{
 
 .current{
     color: #a89e9e;
-    bakc
+
 }
 
 /* fin de la decoracion de la navegacion*/
@@ -148,11 +156,10 @@ nav ul li a:hover{
 
 /*fin slider*/
  .acercade{
-     padding-top: 86px;
      text-align: center;
      padding-left: 15%;
      padding-right: 15%;
-     font-size: 150%;
+     font-size: 120%;
  }
 .space{
      padding-top: 25px;
@@ -164,22 +171,82 @@ nav ul li a:hover{
 }
 
 #habitaciones{
-    padding-top: 25px;
+    padding-bottom: 25px;
 
 }
 
 .limpiar{
     clear: both;
 }
+
 .inner-wrapper{
     float: left;
     width: 100%;
-    background-color: grey;
+}
+.inner-wrapper-2{
+    float: right;
+    width: 100%;
+}
+.habititulo{
+    padding: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 150%;
+    padding-bottom: 50px;
+}
+ul.lista{
+    padding-left: 40px;
+    list-style: square;
+}
+ul.lista li{
+    
+    padding: 1%;
+}
+article{
+    float: left;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    font-size: 20px;
+}
+#habi1{
+    background: grey;
+}
+aside {
+    float: right;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    font-size: 20px;
 }
 
 
-
-
+/*inicio de servicios styling*/
+#Servicios{
+    padding-top: 5%;
+    font-size: 20px;
+}
+.servi{
+    width: 50%;
+    float: left;
+    text-align: left;
+    height: 400px;
+}
+.servi h3{
+    padding-top: 5%;
+}
+#incluido{
+    background: rgb(231, 231, 231);
+}
+#noincluido{
+    background: rgb(206, 201, 201);
+}
+.servi ul li{
+    padding-left: 18%;
+    padding-top: 5%
+}
+.separa{
+    padding-left: 10px;
+}
 
 .seccion{
     width: 29%;

@@ -53,7 +53,7 @@ nav{
     float: right;
     padding: 25px 20px 0 0;
 }
-#icono-menu{
+#menu-icon{
     position: relative;
     display: hidden;
     width: 45px;
@@ -69,7 +69,7 @@ ul{
     list-style-type: none;
 }
 nav ul li{
-    font-size: 150%;
+    font-size: 120%;
     display: inline-block;
     
     padding: 10px;
@@ -206,7 +206,7 @@ article{
     margin: 0 auto;
     width: 50%;
     height: auto;
-    font-size: 20px;
+    font-size: 100%;
 }
 #habi1{
     background: grey;
@@ -216,7 +216,7 @@ aside {
     margin: 0 auto;
     width: 50%;
     height: auto;
-    font-size: 20px;
+    font-size: 100%;
 }
 
 
@@ -253,9 +253,85 @@ aside {
     float: left;
     margin: 2% 2%;
     text-align: center;
+    font-size: 100%;
 }
 footer{
     background: rgb(255, 255, 255);
     width: 100%;
     overflow: hidden;
+}
+.logofooter img{
+    width: 40px;
+    height: 40px;
+}
+.seccion ul li{
+    display: inline-block;
+    padding: 5%;
+}
+
+/*para dispositivos*/
+@media screen and (max-width:768px){
+    h1{
+        font-size: 120%;
+    }
+    h2{
+        font-size: 100%;
+    }
+    h3{
+        font-size: 80%;
+    }
+    p{
+        font-size: 70%;
+    }
+    header{
+        position: absolute;
+        background: rgb(231, 226, 226);
+    }
+    header nav{
+        position: static;
+        width: auto;
+        height:auto;
+        transform: translate(0%);
+
+    }
+    #logo{
+        margin: 15px 0 20px -25px;
+        background: url(../img/minilogo.fw.png) no-repeat center;
+    }
+    #menu-icon{
+        display: inline-block;
+    }
+    nav ul, nav:active ul{
+        display: none;
+        z-index: 1000;
+        position: absolute;
+        padding: 20px;
+        background: black;
+        right: 20px;
+        top: 60px;
+        border: 1px solid #ffffff;
+        border-radius: 10px 0 2px 2px;
+        width: 50%;
+    }
+    nav::hover ul{
+        display: block;
+    }
+    nav li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .servi{
+        font-size: 350%;
+        width: 100%;
+    }
+    article{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+    .hand-mobile{
+        display: none;
+    }
 }

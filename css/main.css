@@ -76,6 +76,7 @@ nav ul li a{
 nav ul li a:hover{
     color: #a89e9e;
     text-decoration: none;
+
 }
 
 .current{
@@ -148,46 +149,38 @@ nav ul li a:hover{
 /*fin slider*/
  .acercade{
      padding-top: 86px;
+     text-align: center;
+     padding-left: 15%;
+     padding-right: 15%;
+     font-size: 150%;
+ }
+.space{
+     padding-top: 25px;
+     padding-bottom: 25px;
  }
 
 .contenido{
     padding-top: 86px;
 }
-.frase{ 
-    padding-top: 100px;
-    padding-bottom: 20px;
-}
-#servicios{
-    padding-top: 20px;
+
+#habitaciones{
+    padding-top: 25px;
+
 }
 
-
-.banner img{
-    width: 100%;
-    border-top: 1px solid white;  
-    border-bottom: 1px solid white;
-    height: 600px;
-}
 .limpiar{
     clear: both;
 }
-.left-col{
-    width: 55%;
+.inner-wrapper{
     float: left;
-    margin: -2% 1% 1% 1%;
-}
-.sidebar{
-    width: 40%;
-    float: right;
-    margin: 1%;
-    text-align: center;
-}
-.servicios{
-    float: left;
-    margin: 0 auto;
     width: 100%;
-    padding: 1%;
+    background-color: grey;
 }
+
+
+
+
+
 .seccion{
     width: 29%;
     float: left;

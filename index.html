@@ -22,11 +22,11 @@
                 <nav class="navbar">
                     <a href="#" id="icono-menu"></a>
                     <ul>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#habitaciones">Habitaciones</a></li>
-                        <li><a href="">Contacto</a></li>
-                        <li><a href="#ubicacion">Ubicacion</a></li>
-                        <li class="reserva"><a href="">Reservar</a></li>
+                        <li><a href="#servicios">SERVICIOS</a></li>
+                        <li><a href="#habitaciones">HABITACIONES</a></li>
+                        <li><a href="">CONTACTO</a></li>
+                        <li><a href="#ubicacion">UBICACIÓN</a></li>
+                        <li class="reserva"><a href="">RESERVAR</a></li>
                     </ul>
                 <div class="limpiar"></div>
                 </nav>
@@ -35,18 +35,21 @@
         <!--Em pieza el contenido de la pagina -->
         <div class="contenido">
             <!--Empieza el slider -->
-            <section id="slider">
-                <div id="slides-cont">
-                    <section><img src="img/dia1.jpg"></section>
-                    <section><img src="img/dia2.jpg"></section>
-                    <section><img src="img/dia3.jpg"></section>
+            <div class="bodyslider">
+                <div id="contenedor-slider" class="contenedor-slider">
+                    <div id="slider" class="slider">
+                        <section class="slider__section"><img src="img/n1.jpg" class="slider__img"></section>
+                        <section class="slider__section"><img src="img/n2.jpg" class="slider__img"></section>
+                        <section class="slider__section"><img src="img/n    3.jpg" class="slider__img"></section>
+                    </div>
+                    <div id="btn-prev" class="btn-prev">&#60;</div>
+                    <div id="btn-next" class="btn-next">&#62;</div>
                 </div>
-                <div id="btn-ant">&#60</div>
-                <div id="btn-nxt">&#62</div>
-            </section>
-       
+            </div>
             
-            <center class="Acercade">
+            <!-- Fin del slider-->
+
+            <center class="acercade">
                 <h1>Siéntete como en casa</h1>
                 <p>
                     El hostal Terrazas tiene una ubicación privilegiada desde donde podrá iniciar su recorrido a la ciudad.
@@ -104,6 +107,6 @@
             </footer>
  
     </div>
-    <script src="js/menu.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>

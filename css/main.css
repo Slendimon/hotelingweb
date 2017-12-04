@@ -8,6 +8,7 @@ body{
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
+    box-sizing: border-box;
  
 }
 h1, h2, h3{
@@ -24,9 +25,11 @@ img{
 }
 
 header{
-    background-color: #b6adad;
+    background-color: #ffffff;
     width: 100%;
     height: 86px;
+    position: fixed;
+
 }
 .header-inner{
     max-width: 1200px;
@@ -60,51 +63,98 @@ ul{
 nav ul li{
     font-size: 150%;
     display: inline-block;
-    float: left;
+    
     padding: 10px;
 }
 
 nav ul li a{
     text-decoration: none;
-    color: rgb(126, 46, 9);
+    color: rgb(0, 0, 0);
     
 }
 
 nav ul li a:hover{
-    color: #ffffff;
+    color: #a89e9e;
     text-decoration: none;
 }
 
 .current{
-    color: #ffffff;
+    color: #a89e9e;
+    bakc
 }
 
 /* fin de la decoracion de la navegacion*/
 
-.contenido{
-    
-}
-.banner{
-    width: 100%;
-}
-
 
 /*Inicio del slider*/
-#slider{
-    display: flex;
-    
-    
-}
 
-#slider-cont{
-    margin: auto;
-    width: 100%;
-    max-width: 1200px;
-    position: relative;
-}
+    .bodyslider{
+        background: rgb(253, 254, 255);
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    .contenedor-slider {
+        margin: auto;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .slider {
+        display: flex;
+        width: 300%;
+    }
+    
+    .slider__section {
+        width: 100%;
+    }
+    
+    .slider__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+  
+    .btn-prev, .btn-next {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    font-family: monospace;
+    cursor: pointer;
+  }
+  
+  .btn-prev:hover, .btn-next:hover {
+    background: white;
+  }
+  
+  .btn-prev {
+    left: 10px;
+  }
+  
+  .btn-next {
+    right: 10px;
+  }
 
-.frase{
-    padding-top: 10px;
+
+/*fin slider*/
+ .acercade{
+     padding-top: 86px;
+ }
+
+.contenido{
+    padding-top: 86px;
+}
+.frase{ 
+    padding-top: 100px;
     padding-bottom: 20px;
 }
 #servicios{

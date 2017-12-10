@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../css/font-awesome.min.css">
 
     <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
-
     
     <title>Hotel Terrazas</title>
 </head>

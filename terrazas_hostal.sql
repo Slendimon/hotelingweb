@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.6
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 10-12-2017 a las 16:50:10
--- Versión del servidor: 5.7.20
--- Versión de PHP: 7.1.11
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 11-12-2017 a las 04:54:06
+-- Versión del servidor: 5.7.14
+-- Versión de PHP: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `terrazashostal`
+-- Base de datos: `terrazas_hostal`
 --
 
 -- --------------------------------------------------------
@@ -33,6 +31,27 @@ CREATE TABLE `habitacion` (
   `nombre_hab` varchar(45) DEFAULT NULL,
   `idtipo_habitacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `habitacion`
+--
+
+INSERT INTO `habitacion` (`idhabitacion`, `nombre_hab`, `idtipo_habitacion`) VALUES
+(1, '101', 1),
+(2, '102', 1),
+(3, '103', 3),
+(4, '104', 3),
+(5, '105', 2),
+(6, '201', 5),
+(7, '202', 2),
+(8, '203', 5),
+(9, '204', 4),
+(10, '205', 2),
+(11, '301', 1),
+(12, '302', 2),
+(13, '303', 4),
+(14, '304', 5),
+(15, '305', 3);
 
 -- --------------------------------------------------------
 
@@ -91,6 +110,17 @@ CREATE TABLE `tipo_habitacion` (
   `precio_habitacion` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `tipo_habitacion`
+--
+
+INSERT INTO `tipo_habitacion` (`idtipo_habitacion`, `nombre_tipohabitacion`, `precio_habitacion`) VALUES
+(1, 'Habitacion simple', '30'),
+(2, 'Habitacion doble', '50'),
+(3, 'Habitacion triple', '70'),
+(4, 'Habitacion cuadruple', '110'),
+(5, 'Habitacion matrimonial ', '90');
+
 -- --------------------------------------------------------
 
 --
@@ -103,6 +133,13 @@ CREATE TABLE `usuarios` (
   `password_usuario` varchar(45) DEFAULT NULL,
   `corre_usuario` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`idusuario`, `nombre_usuario`, `password_usuario`, `corre_usuario`) VALUES
+(1, 'admin', '12345', 'admin@gmail.com');
 
 --
 -- Índices para tablas volcadas
@@ -167,7 +204,6 @@ ALTER TABLE `reserva`
   ADD CONSTRAINT `fk_Reserva_servicios1` FOREIGN KEY (`idservicios`) REFERENCES `servicios` (`idservicios`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_huespedes_has_habitacion_habitacion1` FOREIGN KEY (`idhabitacion`) REFERENCES `habitacion` (`idhabitacion`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_huespedes_has_habitacion_huespedes1` FOREIGN KEY (`idhuespedes`) REFERENCES `huespedes` (`idhuespedes`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-        $("#banner1").css({"height":$(window).height() + "px"});
+        $("#banner1").css({"height":$(window).height()-150 + "px"});
     
         var flag = false;
         var scroll;

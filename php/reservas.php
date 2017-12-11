@@ -24,9 +24,9 @@
 				<ul>
 					<li><a href="../index.html#Servicios">SERVICIOS</a></li>
 					<li><a href="../index.html#habitaciones">HABITACIONES</a></li>
-					<li><a href="../index.html#contacto.php">CONTACTO</a></li>
+					<li><a href="../index.html#contacto">CONTACTO</a></li>
 					<li><a href="reservas.php">RESERVAR</a></li>
-					<li><a href="login.html">LOGIN</a></li>
+					<li><a href="login.php">LOGIN</a></li>
 				</ul>
 			<div class="limpiar"></div>
 			</nav>

@@ -59,3 +59,32 @@ jQuery(document).on('submit','#formig',function(event){
         console.log("complete");
     });
 });
+
+jQuery(document).on('submit','#reser1',function(event){
+    event.preventDefault();
+
+    jQuery.ajax({
+        url: '../php/valreserva.php',
+        type: 'POST',
+        dataType: 'json',
+        data: $(this).serialize(),
+        beforeSend: function(){
+            $('.reservar_boton').val('Registrando...')
+        }
+    })
+    .done(function(respuesta) {
+        console.log(respuesta);
+        if (!respuesta.error) {
+            alert("Reserva realiza con exito");
+            
+        } else {
+            alert("No se ha completado su reserva");
+        }
+    })
+    .fail(function(resp) {
+        console.log("fail");
+    })
+    .always(function(){
+        console.log("complete");
+    });
+});

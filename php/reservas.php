@@ -33,10 +33,12 @@
 		</div>   
     </header>
 	<div class="reserva">
-		<form method="post" action="guardado">
+		<form method="POST" action="" id="reser1">
 			<h2>RESERVAS</h2><br><br>
 			<label>NOMBRE:</label>
 			<input class="reservas_campo" type="text" id="nombre" name="nombre">
+			<label>APELLIDO:</label>
+			<input class="reservas_campo" type="text" id="apellido" name="apellido">
 			<label>E-MAIL:</label>
 			<input class="reservas_campo" type="text" id="email" name="email">
 			<label>TELEFONO:</label>	
@@ -52,9 +54,9 @@
 				<option value="Habitacion Matrimonial">Habitacion Matrimonial</option>
 			</select>	
 			<label>DIA DE LLEGADA:</label>
-			<input class="reservas_campo" type="date" name="fecha" step="1" min="2017-10-01" max="2018-12-31" value="2017-10-01">
+			<input class="reservas_campo" type="date" name="fechalle" step="1" min="2017-10-01" max="2018-12-31" value="2017-10-01">
 			<label>CANTIDAD DE PERSONAS:</label>
-			<select class="reservas_campo">
+			<select class="reservas_campo" name="nropersonas">
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -63,9 +65,10 @@
 				<option value="mas de 6">Mas de 6</option>
 			</select>
 			<label>DIA DE SALIDA:</label>
-			<input class="reservas_campo" type="date" name="fecha" step="1" min="2017-10-01" max="2018-12-31" value="2017-10-01">
+			<input class="reservas_campo" type="date" name="fechasa" step="1" min="2017-10-01" max="2018-12-31" value="2017-10-01">
 			<br><input class="reservar_boton" type="submit" value="RESERVAR">
 		</form>
 	</div>
+	<script src="../js/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,8 @@
+<?php
+include('conexion.php');
+$datos ="SELECT idhabitacion,nombre_hab,nombre_tipohabitacion FROM habitacion INNER JOIN tipo_habitacion ON habitacion.idtipo_habitacion=tipo_habitacion.idtipo_habitacion ORDER BY idhabitacion";
+$dUsuario = $conexion->query($datos);
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -52,13 +57,13 @@
                         <p>Lista de usuarios</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
                         <p>Reservas de habitacion</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="listahabitacion.php">
                         <i class="pe-7s-news-paper"></i>
                         <p>Lista de habitaciones</p>
@@ -145,7 +150,7 @@
                             </a>
                      
                         <li>
-                            <a href="../login/cerrar.php">
+                            <a href="#">
                                 <p>Salir</p>
                             </a>
                         </li>
@@ -161,18 +166,26 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Lista de reservas de habitacion</h4>
+                                <h4 class="title">Lista de habitacion</h4>
                                 
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>ID</th>
-                                    	<th>Nombre</th>
-                                    	<th>Fecha de incio</th>
-                                    	<th>Fecha de salida</th>
-                                    	<th>Tipo de habitacion </th>
+                                    	<th>Numero habitacion</th>
+                                    	<th>Tipo habitacion</th>
+                                    	                                    	
                                     </thead>
+                                    <?php
+				                        while ($regUsuarios= $dUsuario->fetch_array(MYSQLI_BOTH)) {
+                                        echo '<tr>
+                                        <td>'.$regUsuarios['idhabitacion'].'</td>
+					                    <td>'. $regUsuarios['nombre_hab'].'</td>
+					                    <td>'. $regUsuarios['nombre_tipohabitacion'].'</td>						                    
+					                    </tr>';
+			                                	}
+			                        ?>
                                     <tbody>
                                         
                                     </tbody>
@@ -192,7 +205,7 @@
                    
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.facebook.com/luis.neyra.16.com">Hostal Terrazas</a>, Como en casa o mejor.
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.facebook/luis.neyra.16.com">Hostal Terrazas</a>, Como en casa o mejor.
                 </p>
             </div>
         </footer>

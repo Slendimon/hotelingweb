@@ -60,7 +60,7 @@
                 </a>
             </li>
             <li>
-                <a href="typography.html">
+                <a href="listahabitacion.php">
                     <i class="pe-7s-news-paper"></i>
                     <p>Lista de habitaciones</p>
                 </a>
@@ -72,7 +72,7 @@
                 </a>
             </li>
             <li class="active">
-                <a href="usuarionuevo.html">
+                <a href="usuarionuevo.php">
                     <i class="pe-7s-news-paper"></i>
                     <p>Registar nuevo usuario</p>
                 </a>
@@ -179,9 +179,14 @@
                                       <p><input name="pass" type="password" placeholder="Password"></p>                           
                                       <p><input  class="btn btn-danger" type="submit" name="submit" value="Registrarse"></p>
                                      
+                                      
                                     </form>
                                   </div>     
-                                                         
+                                  <?php
+		                            if(isset($_POST['submit'])){
+			                        require("usuarionuevo.php");
+		                            }
+	                              ?>                   
 
                             </div>
                         </div>

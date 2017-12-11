@@ -26,7 +26,7 @@
 					<li><a href="../index.html#habitaciones">HABITACIONES</a></li>
 					<li><a href="../index.html#contacto">CONTACTO</a></li>
 					<li><a href="reservas.php">RESERVAR</a></li>
-					<li><a href="login.php">LOGIN</a></li>
+					<li><a href="../login/login.php">LOGIN</a></li>
 				</ul>
 			<div class="limpiar"></div>
 			</nav>

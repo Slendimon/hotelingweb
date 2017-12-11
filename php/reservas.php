@@ -7,7 +7,7 @@
 
 
 	<link rel="stylesheet" href="../css/main.css">
-	<link rel="stylesheet" href="reservas.css">
+	<link rel="stylesheet" href="../css/reservas.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
 
     <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>

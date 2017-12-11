@@ -6,7 +6,7 @@
 body{
     background: #ffffff;
     color: black;
-    font-family: 'Alegreya Sans',sans-serif;
+    font-family: Arial, Helvetica, sans-serif;  
     margin: 0;
     box-sizing: border-box;
  
@@ -78,7 +78,8 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(2, 2, 2);
+    font-weight: bold;
     
 }
 
@@ -114,6 +115,7 @@ nav ul li a:hover{
     .slider {
         display: flex;
         width: 300%;
+        height: 500px;
     }
     
     .slider__section {
@@ -170,14 +172,17 @@ nav ul li a:hover{
     padding-top:86px;
 }
 .contenido{
+    margin: 0;
     padding-top: 70px;
 }
 
 #habitaciones{
-    padding-bottom: 25px;
-
+    padding-bottom: 50px;
 }
-
+.contenido-medio{
+    padding-left: 4%;
+    padding-right: 4%;
+}
 .limpiar{
     clear: both;
 }
@@ -225,10 +230,11 @@ aside {
 
 /*inicio de servicios styling*/
 #Servicios{
-    padding-top: 5%;
+    padding-top: 10%;
     font-size: 20px;
 }
 .servi{
+   
     width: 50%;
     float: left;
     text-align: left;
@@ -277,8 +283,8 @@ footer{
 }
 /*contacto*/
 #contacto{
-    
     background: url(../img/tacna.jpg)
+
 }
 .cabecera{
     color: white;
@@ -292,32 +298,58 @@ footer{
     font-size: 24px;
 }
 
-.form2{
-    display: inline-block;
-    width: 50%;
+#contacto .form-izq{
     float: left;
-    padding: 0.5%;
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+}
+#contacto .form-der{
+    float: right;
+    width: 50%;
+    height: auto;
+}
+.formBox{
+    width: 100%;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    height: 500px;
+}
+
+.formBox .form-izq input{
+    float: right;
+    width: 70%;
+    margin-bottom: 20px;
+    margin-right: 7%;
+    text-align: center;
+    height: 30px;
+}
+.formBox .form-der textarea {
+    width: 80%;
+    height: 200px;
+}
+.formBox .btn-enviar{
     text-align: center;
 }
-.form2 input{
-    text-align: center;
-    padding-bottom: 2%;
-    padding-top:2%;
-    padding-left: 7%;
-    padding-right: 7%;
-}
-.formulario textarea{
-    height: 200px; 
-    width: 44%;
-}
-.btn-enviar{
-    padding-top: 2.5%;
+.formBox .btn-enviar input{
+    margin-top: 10px;
     text-align: center;
 }
-.btn-enviar input{
-    width: 80px;
+
+.formBox input[type="submit"]{
+    
     height: 40px;
-    font-size: 100%;
+    margin-left: 8%;
+    width: 200px;
+    color: rgb(0, 0, 0);
+    background: rgb(248, 248, 248);
+    cursor: pointer;    
+    font-size: 20px;
+}
+.formBox input[type="submit"]:hover{
+    background: grey;
+    cursor: pointer;
+    color: white;
 }
 
 /*para dispositivos*/
@@ -352,6 +384,9 @@ footer{
     #menu-icon{
         display: inline-block;
     }
+    .slider{
+        height: 250px;
+    }
     nav ul, nav:active ul{
         display: none;
         z-index: 1000;
@@ -364,7 +399,7 @@ footer{
         border-radius: 10px 0 2px 2px;
         width: 50%;
     }
-    nav::hover ul{
+    nav:hover ul{
         display: block;
     }
     nav li {
@@ -373,7 +408,7 @@ footer{
         padding: 10px 0;
     }
     .servi{
-        font-size: 350%;
+        font-size: 100%;
         width: 100%;
     }
     article{

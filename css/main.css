@@ -32,12 +32,11 @@ img{
 }
 
 header{
-    padding-top: -5px;  
+      
     background-color: #ffffff;
     width: 100%;
     height: 86px;
     position: fixed;
-
 }
 .header-inner{
     max-width: 1200px;
@@ -72,7 +71,6 @@ ul{
 nav ul li{
     font-size: 100%;
     display: inline-block;
-    
     padding: 10px;
 }
 
@@ -180,6 +178,7 @@ nav ul li a:hover{
     padding-bottom: 50px;
 }
 .contenido-medio{
+    padding-top: -5%;
     padding-left: 4%;
     padding-right: 4%;
 }
@@ -368,7 +367,11 @@ footer{
     }
     header{
         position: absolute;
-        background: rgb(231, 226, 226);
+        background: rgb(105, 103, 103);
+
+    }
+    .acercade{
+        font-size: 25px;
     }
     header nav{
         position: static;
@@ -382,22 +385,32 @@ footer{
         background: url(../img/minilogo.fw.png) no-repeat center;
     }
     #menu-icon{
+        padding-left: 20px;
+        margin-left: 30px;
         display: inline-block;
     }
-    .slider{
-        height: 250px;
+    .bodyslider{
+        height: 200px;
+    }
+    .contenido-medio{
+        padding-left: 1%;
     }
     nav ul, nav:active ul{
         display: none;
         z-index: 1000;
         position: absolute;
         padding: 20px;
-        background: black;
+        background: rgb(105, 103, 103);
         right: 20px;
         top: 60px;
-        border: 1px solid #ffffff;
-        border-radius: 10px 0 2px 2px;
-        width: 50%;
+
+    }
+    nav ul li{
+        border-bottom:  1px solid white;
+        
+    }
+    nav ul li a{
+        color: white;
     }
     nav:hover ul{
         display: block;
@@ -411,13 +424,20 @@ footer{
         font-size: 100%;
         width: 100%;
     }
+
     article{
         width: 100%;
+        font-size: 20px;
     }
     aside{
         width: 100%;
+        font-size: 20px;
     }
     .hand-mobile{
         display: none;
     }
+    footer{
+        font-size: 19px;
+    }
 }
+

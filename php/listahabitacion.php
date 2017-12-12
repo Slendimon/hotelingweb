@@ -1,7 +1,7 @@
 <?php
 include('conexion.php');
 $datos ="SELECT idhabitacion,nombre_hab,nombre_tipohabitacion FROM habitacion INNER JOIN tipo_habitacion ON habitacion.idtipo_habitacion=tipo_habitacion.idtipo_habitacion ORDER BY idhabitacion";
-$dUsuario = $conexion->query($datos);
+$dUsuario = $con->query($datos);
 ?>
 <!doctype html>
 <html lang="en">
@@ -52,7 +52,7 @@ $dUsuario = $conexion->query($datos);
 
             <ul class="nav">                
                 <li>
-                    <a href="listausuarios.html">
+                    <a href="listausuarios.php">
                         <i class="pe-7s-user"></i>
                         <p>Lista de usuarios</p>
                     </a>
@@ -70,14 +70,14 @@ $dUsuario = $conexion->query($datos);
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
+                    <a href="consultas.php">
                         <i class="pe-7s-science"></i>
                         <p>Consultas de clientes</p>
                     </a>
                 </li>
                 <li>
                     <a href="usuarionuevo.php">
-                        <i class="pe-7s-news-paper"></i>
+                        <i class="pe-7s-add-user"></i>
                         <p>Registar nuevo usuario</p>
                     </a>
                 </li>

@@ -1,3 +1,8 @@
+<?php
+include('conexion.php');
+$datos ="SELECT * FROM usuarios";
+$dUsuario = $con->query($datos);
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +18,6 @@
 
     <!-- Bootstrap core CSS     -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../css/login.css">
 
     <!-- Animation library for notifications   -->
     <link href="../assets/css/animate.min.css" rel="stylesheet"/>
@@ -23,14 +27,13 @@
 
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="assets/css/demo.css" rel="stylesheet" />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
 
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="../assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-
 </head>
 <body>
 
@@ -39,59 +42,59 @@
 
     <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
-    <div class="sidebar-wrapper">
-        <div class="logo">
-            <a href="#" class="simple-text">
-                Hostal Terrazas
-            </a>
-        </div>
 
-        <ul class="nav">                
-            <li>
-                <a href="listausuarios.php">
-                    <i class="pe-7s-user"></i>
-                    <p>Lista de usuarios</p>
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#" class="simple-text">
+                    Hostal Terrazas
                 </a>
-            </li>
-            <li>
-                <a href="table.html">
-                    <i class="pe-7s-note2"></i>
-                    <p>Reservas de habitacion</p>
-                </a>
-            </li>
-            <li>
-                <a href="listahabitacion.php">
-                    <i class="pe-7s-news-paper"></i>
-                    <p>Lista de habitaciones</p>
-                </a>
-            </li>
-            <li>
-                <a href="consultas.php">
-                    <i class="pe-7s-science"></i>
-                    <p>Consultas de clientes</p>
-                </a>
-            </li>
-            <li class="active">
-                <a href="usuarionuevo.php">
-                    <i class="pe-7s-add-user"></i>
-                    <p>Registar nuevo usuario</p>
-                </a>
-            </li>
-            <li>
-                <a href="notifications.html">
-                    <i class="pe-7s-bell"></i>
-                    <p>Notifications</p>
-                </a>
-            </li>
-            <li class="active-pro">
-                <a href="upgrade.html">
-                    <i class="pe-7s-rocket"></i>
-                    <p>Upgrade to PRO</p>
-                </a>
-            </li>
-        </ul>
-    </div>
-    	
+            </div>
+
+            <ul class="nav">                
+                <li class="active">
+                    <a href="listausuarios.php">
+                        <i class="pe-7s-user"></i>
+                        <p>Lista de usuarios</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="table.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>Reservas de habitacion</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="listahabitacion.php">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>Lista de habitaciones</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="consultas.php">
+                        <i class="pe-7s-science"></i>
+                        <p>Consultas de clientes</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="usuarionuevo.php">
+                        <i class="pe-7s-add-user"></i>
+                        <p>Registar nuevo usuario</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="notifications.html">
+                        <i class="pe-7s-bell"></i>
+                        <p>Notifications</p>
+                    </a>
+                </li>
+				<li class="active-pro">
+                    <a href="upgrade.html">
+                        <i class="pe-7s-rocket"></i>
+                        <p>Upgrade to PRO</p>
+                    </a>
+                </li>
+            </ul>
+    	</div>
     </div>
 
     <div class="main-panel">
@@ -104,7 +107,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Registar nuevos usuarios</a>
+                    <a class="navbar-brand" href="#">Reservas de habitacion</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -163,30 +166,30 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Nuevos Usuarios</h4>
+                                <h4 class="title">Lista de reservas de habitacion</h4>
                                 
                             </div>
                             <div class="content table-responsive table-full-width">
-                                <div class="login">
-                                    <div class="login-triangle"></div>
-                                    
-                                    <h2 class="login-header">Registrarse</h2>
-                                 
-                                  
-                                    <form class="login-container" action="registrar.php" method="post">
-                                      <p><input  name="realname" type="text" placeholder="Ingresa tu nombre" /></p>
-                                      <p><input name="mail" type="text" placeholder="Email"></p>
-                                      <p><input name="pass" type="password" placeholder="Password"></p>                           
-                                      <p><input  class="btn btn-danger" type="submit" name="submit" value="Registrarse"></p>
-                                     
-                                      
-                                    </form>
-                                  </div>     
-                                  <?php
-		                            if(isset($_POST['submit'])){
-			                        require("usuarionuevo.php");
-		                            }
-	                              ?>                   
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>ID</th>
+                                    	<th>Nombre</th>
+                                    	<th>Email</th>
+                                    	<th>Password </th>                                    	
+                                    </thead>
+                                    <tbody>
+                                    <?php
+				                        while ($regUsuarios= $dUsuario->fetch_array(MYSQLI_BOTH)) {
+                                        echo '<tr>
+                                        <td>'.$regUsuarios['idusuario'].'</td>
+					                    <td>'. $regUsuarios['nombre_usuario'].'</td>
+					                    <td>'. $regUsuarios['corre_usuario'].'</td>	
+					                    <td>'. base64_decode($regUsuarios['password_usuario']).'</td>				                        
+					                    </tr>';
+			                                	}
+			                        ?>
+                                    </tbody>
+                                </table>
 
                             </div>
                         </div>
@@ -214,15 +217,18 @@
 
 </body>
 
-        <!--   Core JS Files   -->
+    <!--   Core JS Files   -->
     <script src="../assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
-	<script src=".//assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--  Charts Plugin -->
 	<script src="../assets/js/chartist.min.js"></script>
 
     <!--  Notifications Plugin    -->
-    <script src="../assets/js/bootstrap-notify.js"></script>   
+    <script src="../assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="../assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
@@ -230,10 +236,5 @@
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="../assets/js/demo.js"></script>
 
-    <script>
-        $().ready(function(){
-            demo.initGoogleMaps();
-        });
-    </script>
 
 </html>

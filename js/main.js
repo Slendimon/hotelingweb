@@ -69,7 +69,7 @@ jQuery(document).on('submit','#reser1',function(event){
         dataType: 'json',
         data: $(this).serialize(),
         beforeSend: function(){
-            $('.reservar_boton').val('Registrando...')
+            $('.reservar_boton').val('Reservando...')
         }
     })
     .done(function(respuesta) {

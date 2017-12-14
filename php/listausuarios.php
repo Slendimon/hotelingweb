@@ -1,7 +1,8 @@
 <?php
-
+include('conexion.php');
+$datos ="SELECT * FROM usuarios";
+$dUsuario = $con->query($datos);
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -50,13 +51,13 @@
             </div>
 
             <ul class="nav">                
-                <li>
+                <li class="active">
                     <a href="listausuarios.php">
                         <i class="pe-7s-user"></i>
                         <p>Lista de usuarios</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
                         <p>Reservas de habitacion</p>
@@ -79,7 +80,13 @@
                         <i class="pe-7s-add-user"></i>
                         <p>Registar nuevo usuario</p>
                     </a>
-                </li>				
+                </li>
+                <li>
+                    <a href="notifications.html">
+                        <i class="pe-7s-bell"></i>
+                        <p>Notifications</p>
+                    </a>
+                </li>
             </ul>
     	</div>
     </div>
@@ -161,12 +168,20 @@
                                     <thead>
                                         <th>ID</th>
                                     	<th>Nombre</th>
-                                    	<th>Fecha de incio</th>
-                                    	<th>Fecha de salida</th>
-                                    	<th>Tipo de habitacion </th>
+                                    	<th>Email</th>
+                                    	<th>Password </th>                                    	
                                     </thead>
                                     <tbody>
-                                        
+                                    <?php
+				                        while ($regUsuarios= $dUsuario->fetch_array(MYSQLI_BOTH)) {
+                                        echo '<tr>
+                                        <td>'.$regUsuarios['idusuario'].'</td>
+					                    <td>'. $regUsuarios['nombre_usuario'].'</td>
+					                    <td>'. $regUsuarios['corre_usuario'].'</td>	
+					                    <td>'. base64_decode($regUsuarios['password_usuario']).'</td>				                        
+					                    </tr>';
+			                                	}
+			                        ?>
                                     </tbody>
                                 </table>
 
@@ -184,7 +199,7 @@
                    
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.facebook.com/luis.neyra.16.com">Hostal Terrazas</a>, Como en casa o mejor.
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.facebook/luis.neyra.16.com">Hostal Terrazas</a>, Como en casa o mejor.
                 </p>
             </div>
         </footer>

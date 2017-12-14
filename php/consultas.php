@@ -1,3 +1,8 @@
+<?php
+include('conexion.php');
+$datos ="SELECT * FROM correos";
+$dUsuario = $con->query($datos);
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -46,13 +51,13 @@
             </div>
 
             <ul class="nav">                
-                <li class="active">
-                    <a href="listausuarios.html">
+                <li>
+                    <a href="listausuarios.php">
                         <i class="pe-7s-user"></i>
                         <p>Lista de usuarios</p>
                     </a>
                 </li>
-                <li>
+                <li >
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
                         <p>Reservas de habitacion</p>
@@ -64,30 +69,19 @@
                         <p>Lista de habitaciones</p>
                     </a>
                 </li>
-                <li>
-                    <a href="icons.html">
+                <li class="active">
+                    <a href="consultas.php">
                         <i class="pe-7s-science"></i>
                         <p>Consultas de clientes</p>
                     </a>
                 </li>
                 <li>
                     <a href="usuarionuevo.php">
-                        <i class="pe-7s-news-paper"></i>
+                        <i class="pe-7s-add-user"></i>
                         <p>Registar nuevo usuario</p>
                     </a>
                 </li>
-                <li>
-                    <a href="notifications.html">
-                        <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
-				<li class="active-pro">
-                    <a href="upgrade.html">
-                        <i class="pe-7s-rocket"></i>
-                        <p>Upgrade to PRO</p>
-                    </a>
-                </li>
+               				
             </ul>
     	</div>
     </div>
@@ -102,7 +96,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Reservas de habitacion</a>
+                    <a class="navbar-brand" href="#">Consulta de clientes</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -161,19 +155,30 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Lista de reservas de habitacion</h4>
+                                <h4 class="title">Lista de consultas de los clientes</h4>
                                 
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>ID</th>
-                                    	<th>Nombre</th>
-                                    	<th>Email</th>
-                                    	<th>Password </th>                                    	
+                                    	<th>Nombre </th>
+                                    	<th>Correo</th>
+                                    	<th>Asunto</th>
+                                    	<th>Consulta </th>
                                     </thead>
                                     <tbody>
-                                        
+                                    <?php
+				                        while ($regUsuarios= $dUsuario->fetch_array(MYSQLI_BOTH)) {
+                                        echo '<tr>
+                                        <td>'.$regUsuarios['id_consulta'].'</td>
+					                    <td>'. $regUsuarios['nombre'].'</td>
+                                        <td>'. $regUsuarios['correo'].'</td>
+                                        <td>'. $regUsuarios['asunto'].'</td>
+					                    <td>'. $regUsuarios['consulta'].'</td>						                    
+					                    </tr>';
+			                                	}
+			                        ?> 
                                     </tbody>
                                 </table>
 
@@ -191,7 +196,7 @@
                    
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.facebook/luis.neyra.16.com">Hostal Terrazas</a>, Como en casa o mejor.
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.facebook.com/luis.neyra.16.com">Hostal Terrazas</a>, Como en casa o mejor.
                 </p>
             </div>
         </footer>

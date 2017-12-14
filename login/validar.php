@@ -7,7 +7,7 @@
         $myusername = mysqli_real_escape_string($con,$_POST['login']);
         $mypassword = base64_encode($_POST['password']);
         
-        $sql = "SELECT nombre_usuario FROM usuarios 
+        $sql = "SELECT nombre_usuario,idusuario FROM usuarios 
                 WHERE nombre_usuario = '$myusername' and password_usuario = '$mypassword'";
 
         $result = mysqli_query($con,$sql);
@@ -19,8 +19,9 @@
         if($count == 1):
 
             $_SESSION['login_user'] = $myusername;
+            $_SESSION['id_login']= $row['idusuario'];
                    
-            echo json_encode(array('error' => false));
+            echo json_encode(array('error' => false, 'id' => $row['idusuario']));
     
 
         else: 

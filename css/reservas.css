@@ -1,51 +1,159 @@
+.container {
+	display: grid;
+	grid-template-columns: 0.25fr 15px 0.75fr;
+	grid-template-rows: auto 25px auto 25px auto 25px auto;
+   
+}
+   
+.grid {
+	background-color: #444;
+	color: #fff;
+	padding: 20px;
+}
 
+.header {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	background-color: rgb(228, 218, 218);
+	color: rgb(31, 28, 28);
 
+}
+
+.sidebar {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 6;
+	background: #a0c263;
+}
+.content {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	background: #f5c531;
+	height: 400px;
+}
+.extra {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 5;
+	grid-row-end: 6;
+	background: #898989;
+  }
+   
+.footer {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 7;
+	grid-row-end: 8;
+	background: #FFA500;
+}
 body{
-	background: rgba(197, 225, 165,1.0);
+	background: rgb(237, 238, 235);
+
+}
+#logo{
+    margin: 10px;
+    float: left;
+    width: 200px;
+    height: 50px;
+	background: url(../img/logoterrazas.fw.png) no-repeat center;
+	border-block-end: 2px solid black;
 }
 
-.reserva{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	font-weight:bold;
-	padding-top: 86px;
+.logo{
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+.reserp{
+	width: 40%;
+	float: left;
+	text-align: left;
+
+}
+.reserp p{
+	font-size: 2rem;
+	margin: auto;
+	padding-top: 10px;
+}
+.navbar{
+	width: 30%;
+	float: right;
+	text-align: center;
+	padding-right: 20px;
+}
+nav{
+    float: right;
+	padding: 0;
+	border: 0;
+}
+#menu-icon{
+    position: relative;
+    display: hidden;
+    width: 45px;
+    height: 40px;
+    background: url(../img/navbar.png) center;
 }
 
-.reserva form{
-	display: flex;
-	flex-direction: column;
-	text-align:center;
-	background: rgba(255, 253, 231,1.0);
-	padding: 1em 3em;
-	border-radius: 20px; 
-	border: none;
+a:hover#icono-menu{
+    border-radius: 4px 4px 0 0;
+
+}
+ul{
+    list-style-type: none;
+}
+nav ul li{
+   
+    display: inline-block;
+    padding: 10px;
 }
 
-.reserva form h2{
-	font-weight:bold;
-	font-style: italic;
-	color: blue;
-}
-.reserva form label{
-	font-weight:bold;
-	font-style: italic;
+nav ul li a{
+    text-decoration: none;
+    color: rgb(2, 2, 2);
+    font-weight: bold;
+    
 }
 
-.reservas_campo{
-	padding: 0.5em 1em;
-	min-width: 20em;
-	margin: 0.5em 0 0.5em 0;
-	font-size: 12px;
-	border-radius: 10px; 
-	border: none;
-	background: rgba(255, 224, 130,1.0);
+nav ul li a:hover{
+    color: #a89e9e;
+    text-decoration: none;
+
 }
-.reservar_boton{
-	padding: 0.5em 0;
-	border-radius: 10px;
-	border:none;
-	color:blue;
-	background: #95a5a6;
+
+.current{
+    color: #a89e9e;
 }
+/*empieza sidebar*/
+	.disponible form label{
+		font-size: x-large;
+		width: 100%;
+	}
+	.disponible input{
+		margin-bottom: 20px;
+	}
+	.reservas_campo{
+		width: 80%;
+		height: 40px;
+		font-size: 20px;
+		text-align: center;
+		margin-right: 20px;
+	}
+	.nro_hab{
+		margin-top: 5px;
+		width: 20%;
+		margin-right:80%;
+	}
+	.btnbuscar-re{
+		width: 50%;
+		text-align: center;
+		margin: 9% 25%
+	}
+	.disponible form input[type="submit"]{
+		height: 40px;
+		font-size: 20px;
+	}

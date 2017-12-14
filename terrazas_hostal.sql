@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.6
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 11-12-2017 a las 04:54:06
--- Versión del servidor: 5.7.14
--- Versión de PHP: 5.6.25
+-- Servidor: localhost
+-- Tiempo de generación: 14-12-2017 a las 07:21:54
+-- Versión del servidor: 5.7.20
+-- Versión de PHP: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,35 +25,62 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `correos`
+--
+
+CREATE TABLE `correos` (
+  `id_consulta` int(5) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `correo` varchar(100) NOT NULL,
+  `asunto` varchar(100) NOT NULL,
+  `consulta` varchar(200) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `habitacion`
 --
 
 CREATE TABLE `habitacion` (
   `idhabitacion` int(11) NOT NULL,
-  `nombre_hab` varchar(45) DEFAULT NULL,
-  `idtipo_habitacion` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `nombre_hab` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `idtipo_habitacion` int(11) NOT NULL,
+  `estado` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `habitacion`
 --
 
-INSERT INTO `habitacion` (`idhabitacion`, `nombre_hab`, `idtipo_habitacion`) VALUES
-(1, '101', 1),
-(2, '102', 1),
-(3, '103', 3),
-(4, '104', 3),
-(5, '105', 2),
-(6, '201', 5),
-(7, '202', 2),
-(8, '203', 5),
-(9, '204', 4),
-(10, '205', 2),
-(11, '301', 1),
-(12, '302', 2),
-(13, '303', 4),
-(14, '304', 5),
-(15, '305', 3);
+INSERT INTO `habitacion` (`idhabitacion`, `nombre_hab`, `idtipo_habitacion`, `estado`) VALUES
+(1, '101', 1, 0),
+(2, '102', 2, 0),
+(3, '103', 3, 0),
+(4, '201', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura Stand-in para la vista `habitacionlibre`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `habitacionlibre` (
+`idhabitacion` int(11)
+,`estado` int(11)
+,`nombre_tipohabitacion` varchar(45)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `habitacion_has_servicio`
+--
+
+CREATE TABLE `habitacion_has_servicio` (
+  `idhabitacion` int(11) NOT NULL,
+  `idservicios` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -61,12 +90,28 @@ INSERT INTO `habitacion` (`idhabitacion`, `nombre_hab`, `idtipo_habitacion`) VAL
 
 CREATE TABLE `huespedes` (
   `idhuespedes` int(11) NOT NULL,
-  `nombre_cliente` varchar(45) DEFAULT NULL,
-  `apellido_cliente` varchar(45) DEFAULT NULL,
-  `correo_cliente` varchar(45) DEFAULT NULL,
-  `telefono_cliente` varchar(45) DEFAULT NULL,
-  `precedencia_cliente` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `nombre_cliente` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `apellido_cliente` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `correo_cliente` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `telefono_cliente` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `precedencia_cliente` varchar(50) CHARACTER SET utf8 DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `huespedes`
+--
+
+INSERT INTO `huespedes` (`idhuespedes`, `nombre_cliente`, `apellido_cliente`, `correo_cliente`, `telefono_cliente`, `precedencia_cliente`) VALUES
+(1, 'lucas', 'piro', 'lucas@gmail.com', '123001230', 'lima'),
+(31, '123', '321', '1223', '123', '12312'),
+(30, '21', '3312', '32132', '321', '123'),
+(29, 'ds', '21', '321', '321', '321'),
+(28, 'asd123123', 'ad', '213', '123', '23'),
+(27, 'asd123123', 'ad', '213', '123', '23'),
+(26, '', 'ad', '213', '123', '23'),
+(25, 'asda', 'dasd', 'dasd', 'asd', 'dasd'),
+(24, 'asda', 'dasd', 'dasd', 'asd', 'dasd'),
+(23, 'asda', 'dasd', 'dasd', 'asd', 'dasd');
 
 -- --------------------------------------------------------
 
@@ -76,13 +121,13 @@ CREATE TABLE `huespedes` (
 
 CREATE TABLE `reserva` (
   `idhuespedes` int(11) NOT NULL,
-  `idhabitacion` int(11) NOT NULL,
-  `idservicios` int(11) NOT NULL,
+  `idhabitacion` int(11) DEFAULT NULL,
+  `idservicios` int(11) DEFAULT NULL,
   `fecha_inicio` date DEFAULT NULL,
   `fecha_salida` date DEFAULT NULL,
   `nro_ocupantes` int(11) DEFAULT NULL,
   `detalle_reserva` varchar(50) DEFAULT NULL,
-  `idusuario` tinyint(3) NOT NULL,
+  `idusuario` tinyint(3) DEFAULT NULL,
   `idReservacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -94,9 +139,17 @@ CREATE TABLE `reserva` (
 
 CREATE TABLE `servicios` (
   `idservicios` int(11) NOT NULL,
-  `nombre_servicio` varchar(45) DEFAULT NULL,
-  `detalle_servicio` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `nombre_servicio` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `detalle_servicio` varchar(50) CHARACTER SET utf8 DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `servicios`
+--
+
+INSERT INTO `servicios` (`idservicios`, `nombre_servicio`, `detalle_servicio`) VALUES
+(1, 'lavanderia', '15'),
+(2, 'transporte', NULL);
 
 -- --------------------------------------------------------
 
@@ -106,20 +159,20 @@ CREATE TABLE `servicios` (
 
 CREATE TABLE `tipo_habitacion` (
   `idtipo_habitacion` int(11) NOT NULL,
-  `nombre_tipohabitacion` varchar(45) DEFAULT NULL,
-  `precio_habitacion` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `nombre_tipohabitacion` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `precio_habitacion` varchar(45) CHARACTER SET utf8 DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tipo_habitacion`
 --
 
 INSERT INTO `tipo_habitacion` (`idtipo_habitacion`, `nombre_tipohabitacion`, `precio_habitacion`) VALUES
-(1, 'Habitacion simple', '30'),
-(2, 'Habitacion doble', '50'),
-(3, 'Habitacion triple', '70'),
-(4, 'Habitacion cuadruple', '110'),
-(5, 'Habitacion matrimonial ', '90');
+(1, 'simple', '35'),
+(2, 'doble', '40'),
+(3, 'tiple', '50'),
+(4, 'matrimonial', '45'),
+(5, 'cuadruple', '60');
 
 -- --------------------------------------------------------
 
@@ -129,28 +182,49 @@ INSERT INTO `tipo_habitacion` (`idtipo_habitacion`, `nombre_tipohabitacion`, `pr
 
 CREATE TABLE `usuarios` (
   `idusuario` tinyint(3) NOT NULL,
-  `nombre_usuario` varchar(45) DEFAULT NULL,
-  `password_usuario` varchar(45) DEFAULT NULL,
-  `corre_usuario` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `nombre_usuario` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `password_usuario` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `corre_usuario` varchar(45) CHARACTER SET utf8 DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`idusuario`, `nombre_usuario`, `password_usuario`, `corre_usuario`) VALUES
-(1, 'admin', '12345', 'admin@gmail.com');
+(1, 'admin', 'MTIzNDU=', 'admin@admin.com');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `habitacionlibre`
+--
+DROP TABLE IF EXISTS `habitacionlibre`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `habitacionlibre`  AS  select `h`.`idhabitacion` AS `idhabitacion`,`h`.`estado` AS `estado`,`t`.`nombre_tipohabitacion` AS `nombre_tipohabitacion` from (`habitacion` `h` join `tipo_habitacion` `t` on((`h`.`idtipo_habitacion` = `t`.`idtipo_habitacion`))) where (`h`.`estado` = 0) ;
 
 --
 -- Índices para tablas volcadas
 --
 
 --
+-- Indices de la tabla `correos`
+--
+ALTER TABLE `correos`
+  ADD PRIMARY KEY (`id_consulta`);
+
+--
 -- Indices de la tabla `habitacion`
 --
 ALTER TABLE `habitacion`
-  ADD PRIMARY KEY (`idhabitacion`),
-  ADD KEY `fk_habitacion_tipo_habitacion_idx` (`idtipo_habitacion`);
+  ADD PRIMARY KEY (`idhabitacion`);
+
+--
+-- Indices de la tabla `habitacion_has_servicio`
+--
+ALTER TABLE `habitacion_has_servicio`
+  ADD KEY `fk_habitacion_has_servicio_servicio1_idx` (`idservicios`) USING BTREE,
+  ADD KEY `fk_habitacion_has_servicio_habitacion1_idx` (`idhabitacion`) USING BTREE;
 
 --
 -- Indices de la tabla `huespedes`
@@ -187,23 +261,45 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`idusuario`);
 
 --
--- Restricciones para tablas volcadas
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- Filtros para la tabla `habitacion`
+-- AUTO_INCREMENT de la tabla `correos`
+--
+ALTER TABLE `correos`
+  MODIFY `id_consulta` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `habitacion`
 --
 ALTER TABLE `habitacion`
-  ADD CONSTRAINT `fk_habitacion_tipo_habitacion` FOREIGN KEY (`idtipo_habitacion`) REFERENCES `tipo_habitacion` (`idtipo_habitacion`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  MODIFY `idhabitacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- Filtros para la tabla `reserva`
+-- AUTO_INCREMENT de la tabla `huespedes`
 --
-ALTER TABLE `reserva`
-  ADD CONSTRAINT `fk_Reserva_Usuarios1` FOREIGN KEY (`idusuario`) REFERENCES `usuarios` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_Reserva_servicios1` FOREIGN KEY (`idservicios`) REFERENCES `servicios` (`idservicios`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_huespedes_has_habitacion_habitacion1` FOREIGN KEY (`idhabitacion`) REFERENCES `habitacion` (`idhabitacion`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_huespedes_has_habitacion_huespedes1` FOREIGN KEY (`idhuespedes`) REFERENCES `huespedes` (`idhuespedes`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `huespedes`
+  MODIFY `idhuespedes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT de la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  MODIFY `idservicios` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `tipo_habitacion`
+--
+ALTER TABLE `tipo_habitacion`
+  MODIFY `idtipo_habitacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `idusuario` tinyint(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -22,6 +22,7 @@ $(document).ready(function(){
 
                 $("header").css({"background-color": "#FFFFFF"});
                 $("header nav ul li a").css({"color":"#3C3C3C"});
+                $("header nav ul li a:hover").css({"color": "#807a7a"});
                 flag = false;
             }
         }
@@ -60,31 +61,4 @@ jQuery(document).on('submit','#formig',function(event){
     });
 });
 
-jQuery(document).on('submit','#reser1',function(event){
-    event.preventDefault();
 
-    jQuery.ajax({
-        url: '../php/valreserva.php',
-        type: 'POST',
-        dataType: 'json',
-        data: $(this).serialize(),
-        beforeSend: function(){
-            $('.reservar_boton').val('Reservando...')
-        }
-    })
-    .done(function(respuesta) {
-        console.log(respuesta);
-        if (!respuesta.error) {
-            alert("Reserva realiza con exito");
-            
-        } else {
-            alert("No se ha completado su reserva");
-        }
-    })
-    .fail(function(resp) {
-        console.log("fail");
-    })
-    .always(function(){
-        console.log("complete");
-    });
-});

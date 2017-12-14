@@ -48,7 +48,7 @@
 
         <ul class="nav">                
             <li>
-                <a href="listausuarios.html">
+                <a href="listausuarios.php">
                     <i class="pe-7s-user"></i>
                     <p>Lista de usuarios</p>
                 </a>
@@ -66,29 +66,19 @@
                 </a>
             </li>
             <li>
-                <a href="icons.html">
+                <a href="consultas.php">
                     <i class="pe-7s-science"></i>
                     <p>Consultas de clientes</p>
                 </a>
             </li>
             <li class="active">
                 <a href="usuarionuevo.php">
-                    <i class="pe-7s-news-paper"></i>
+                    <i class="pe-7s-add-user"></i>
                     <p>Registar nuevo usuario</p>
                 </a>
             </li>
-            <li>
-                <a href="notifications.html">
-                    <i class="pe-7s-bell"></i>
-                    <p>Notifications</p>
-                </a>
-            </li>
-            <li class="active-pro">
-                <a href="upgrade.html">
-                    <i class="pe-7s-rocket"></i>
-                    <p>Upgrade to PRO</p>
-                </a>
-            </li>
+          
+            
         </ul>
     </div>
     	

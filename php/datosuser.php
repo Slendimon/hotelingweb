@@ -36,7 +36,7 @@
 		</div>
 		<div class="grid sidebar">
 			<div class="disponible">
-				<form action="" method="post" id="resebusca">
+				<form action="" method="post">
 					<h2>Seleccione la disponibilidad</h2>
 					<label>Fecha de llegada: </label>
 					<input class="reservas_campo" type="date" name="fechalle" step="1" min="2017-10-01" 
@@ -44,15 +44,16 @@
 					<label>Fecha de salida:</label>
 					<input class="reservas_campo" type="date" name="fechasa" step="1" min="2017-10-01" 
 								max="2018-12-31" value="2017-10-01">
-				
+	
 					<input type="submit" class="btnbuscar-re" value="BUSCAR" name="buscarhab">
 				</form>
 			</div>
 			
 		</div>
 		<div class="grid content">
-            <div>
+            <div class="disponible">
                 <form action="" id="reser1">
+					
                     <input type="text" placeholder="Nombre" name="nombre">
                     <input type="text" placeholder="apellido" name="apellido">
                     <input type="email" placeholder="Correo electronico" name="correo">

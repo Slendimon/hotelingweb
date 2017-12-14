@@ -28,3 +28,15 @@ jQuery(document).on('submit','#reser1',function(event){
         console.log("complete");
     });
 });
+
+function grabar(){
+    var url = 'guardar_reserva.php';
+    $ajax({
+        method: 'POST',
+        url: url,
+        data: $(this).serialize(),
+        succes: function(responde){
+            console.log(response);
+        }
+    })
+}

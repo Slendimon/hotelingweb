@@ -13,15 +13,15 @@ if($count==1){
 	echo "El email ya esta en uso";
 }
 else{
-	$query= "INSERT INTO usuarios (iduser,nombre_usuario,password_usuario,corre_usuario) VALUES ('3','$_POST[realname]','$hash','$_POST[mail]')";
+	$query= "INSERT INTO usuarios (nombre_usuario,password_usuario,corre_usuario) VALUES ('$_POST[realname]','$hash','$_POST[mail]')";
 	if ($con->query($query) === TRUE) {
 		echo '<script>alert ("Registrado con exito");</script>';
-		header('Location: listausuarios.html');
+		header('Location: listausuarios.php');
 	}
 	else{
 		echo '<script>alert ("no se pudo");</script>';
 		sleep(5);
-		header('Location: listausuarios.html');
+		header('Location: listausuarios.php');
 		
 	}
 }

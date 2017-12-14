@@ -6,6 +6,5 @@
         <div class="der">
             <span>Habitacion Triple</span>
             <h1>S/. 65.99</h1>
-            <button><a href="datosuser.php"> Reservar</a></button>
         </div>
     </div>

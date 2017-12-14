@@ -9,7 +9,7 @@
         <div class="der">
             <span>Habitacion simple</span>
             <h1>S/. 44.99</h1>
-            <button>Reservar</button>
+        
         </div>
     </div>
 </body>

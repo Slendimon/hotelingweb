@@ -35,78 +35,56 @@
 			</div>
 
 		</div>
+		
 		<div class="grid sidebar">
-			<div class="disponible">
-				<form action="" method="post" id="resebusca">
-					<h2>Seleccione la disponibilidad</h2>
-					<label>Fecha de llegada: </label>
-					<input class="reservas_campo" type="date" name="fechalle" step="1" min="2017-10-01" 
-								max="2018-12-31" value="2017-10-01">
-					<label>Fecha de salida:</label>
-					<input class="reservas_campo" type="date" name="fechasa" step="1" min="2017-10-01" 
-								max="2018-12-31" value="2017-10-01">
-				
-					<input type="submit" class="btnbuscar-re" value="BUSCAR" name="buscarhab">
-				</form>
-			</div>
-			
+
 		</div>
 		<div class="grid content">
-			<div class="table ">
-			<table>
-
-			<?php
-			if(isset($_POST['buscarhab'])){
-				include_once("buscar_hab.php");
-				if ($counthab > 0):
-					if($counthab == 1):
-						switch ($rowhab['nombre_tipohabitacion']):
-							case 'simple':
-								include_once("counthabsimple.php");
-								break;
-							case 'doble':
-								include_once("counthabdoble.php");
-								break;
-							case 'triple':
-								include_once("counthabtriple.php");
-								break;
-							case 'matrimonial':
-								include_once("counthabmatri.php");
-								break;
-							default:
-								echo"fuck off";
-								break;
-						endswitch;
-					endif;
-					if($counthab == 2):
-						echo 'asdasd';
-						if($rowhab['nombre_tipohabitacion'] == 'simple'):
-							include_once("counthabsimple.php");
-							if($rowhab['nombre_tipohabitacion'] =='doble'):
-								include_once("counthabdoble.php");
-							endif;
-						endif;
-					endif;
-					if ($counthab == 3):
+			<div class="disponible">
+				<div class="table ">
+				<form action="valreserva.php" method="post" id="resebusca">
+						<h2>Seleccione la disponibilidad</h2>
+						<label>Fecha de llegada: </label>
+						<input class="reservas_campo" type="date" name="fechalle" step="1" min="2017-12-14" 
+									max="2018-12-31" value="2017-12-14">
+						<label>Fecha de salida:</label>
+						<input class="reservas_campo" type="date" name="fechasa" step="1" min="2017-10-01" 
+									max="2018-12-31"><br>
+						<label>Nro de personas:</label>
+						<input type="text" name="nro_personas" class="nro_per">
+					
+						<label>Tipo habitacion: </label><select name="tipo_hab" >
+							<option value="1">Simple</option>
+							<option value="2">Doble</option>
+							<option value="3">Triple</option>
+							<option value="4">Matrimonial</option>
+						</select><br>
+						<input type="text" placeholder="Nombre" name="nombre">
+						<input type="text" placeholder="apellido" name="apellido">
+						<input type="email" placeholder="Correo electronico" name="correo">
+						<input type="" placeholder="Telefono" name="telefono">
+						<input type="text" placeholder="Procedencia" name="procedencia">
+						
+						<table>
+						<?php
 						echo '<th>'; include_once("counthabsimple.php"); echo '</th>';
 						echo '<th>';include_once("counthabdoble.php");echo '</th>';
 						echo '<th>';include("counthabtriple.php");echo '</th>';
-					endif;
-				else:
-					echo '<h1>No hay habitaciones Libres</h1>';
-				endif;
+						?>
+						</table>
+					<input type="submit" class="btnbuscar-re" value="Reservar" name="buscarhab">
+				</form>
 
-			}	
-			?>
-			</table>
+			
 			</div>
 		</div>
-		<div class="grid extra">
+
+		<!--<div class="grid extra">
 
 		</div>
 		<div class="grid footer">
-
-		</div>
+		-->
+		
 	
 		
 	</div>

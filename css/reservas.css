@@ -7,7 +7,7 @@
    
 .grid {
 	background-color: #444;
-	color: #fff;
+	color: rgb(0, 0, 0);
 	padding: 20px;
 }
 
@@ -26,14 +26,15 @@
 	grid-column-end: 2;
 	grid-row-start: 3;
 	grid-row-end: 6;
-	background: #a0c263;
+	background: #ffffff;
+	padding-left: 10%;
 }
 .content {
 	grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row-start: 3;
-	grid-row-end: 4;
-	background: #f5c531;
+	grid-row-end: 7;
+	background: #ffffff;
 	height: 400px;
 }
 .extra {
@@ -49,10 +50,10 @@
 	grid-column-end: 4;
 	grid-row-start: 7;
 	grid-row-end: 8;
-	background: #FFA500;
+	background: rgb(255, 255, 255);
 }
 body{
-	background: rgb(237, 238, 235);
+	background: rgb(255, 255, 255);
 
 }
 #logo{
@@ -120,7 +121,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: #a89e9e;
+    color: #f1f1f1;
     text-decoration: none;
 
 }
@@ -131,25 +132,25 @@ nav ul li a:hover{
 /*empieza sidebar*/
 	.disponible form label{
 		font-size: x-large;
-		width: 100%;
+	
 	}
 	.disponible input{
 		margin-bottom: 20px;
 	}
 	.reservas_campo{
-		width: 80%;
+		width: 20%;
 		height: 40px;
 		font-size: 20px;
 		text-align: center;
 		margin-right: 20px;
 	}
-	.nro_hab{
+	.nro_per{
 		margin-top: 5px;
 		width: 20%;
 		margin-right:80%;
 	}
 	.btnbuscar-re{
-		width: 50%;
+		width: 10%;
 		text-align: center;
 		margin: 9% 25%
 	}
@@ -157,3 +158,6 @@ nav ul li a:hover{
 		height: 40px;
 		font-size: 20px;
 	}
+th{
+	margin: 20px;
+}

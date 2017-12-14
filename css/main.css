@@ -108,13 +108,14 @@ nav ul li a:hover{
         margin: auto;
         width: 100%;
         overflow: hidden;
+        height: auto;
 
     }
     
     .slider {
         display: flex;
         width: 300%;
-        height: 500px;
+        height: auto;
     }
     
     .slider__section {
